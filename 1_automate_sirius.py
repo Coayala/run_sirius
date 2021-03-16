@@ -20,4 +20,4 @@ for file in files:
     group = file.split('/')[-1].split('.')[0]
     print('###### Working with {}'.format(group))
     print()
-    subprocess.call(['./5_sirius_cli_run.sh', os.path.join(outdir, group), file])
+    subprocess.call(['./1_sirius_cli_run.sh', os.path.join(outdir, group), file])
