@@ -19,3 +19,4 @@ ADD https://github.com/Coayala/run_sirius/blob/main/0_ms2_into_groups.ipynb
 RUN chmod +x 1_automate_sirius.py
 RUN chmod +x 1_sirius_cli_run.sh
 
+ENTRYPOINT ["/bin/python", "1_automate_sirius.py"]
