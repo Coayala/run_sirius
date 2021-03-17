@@ -10,11 +10,17 @@ RUN wget https://bio.informatik.uni-jena.de/repository/dist-release-local/de/uni
 RUN unzip sirius-4.6.1-linux64-headless.zip
 RUN echo "export SIRIUS=/home/jovyan/sirius/bin/sirius" >> /home/jovyan/.bashrc
 
-# Download scripts for running SIRIUS
+# Create working directory
 
-RUN git clone https://github.com/Coayala/run_sirius.git
+RUN mkdir work
 
-WORKDIR 'run_sirius'
+WORKDIR /home/jovyan/work/
+
+# Add scripts for running SIRIUS
+
+ADD https://github.com/Coayala/run_sirius/blob/main/1_automate_sirius.py
+ADD https://github.com/Coayala/run_sirius/blob/main/1_sirius_cli_run.sh
+ADD https://github.com/Coayala/run_sirius/blob/main/0_ms2_into_groups.ipynb
+
 RUN chmod +x 1_automate_sirius.py
 RUN chmod +x 1_sirius_cli_run.sh
-
