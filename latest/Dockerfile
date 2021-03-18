@@ -12,8 +12,6 @@ RUN echo "export SIRIUS=/home/jovyan/sirius/bin/sirius" >> /home/jovyan/.bashrc
 
 # Create working directory
 
-RUN mkdir work
-
 WORKDIR /home/jovyan/work/
 
 # Add scripts for running SIRIUS
