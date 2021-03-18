@@ -16,9 +16,9 @@ WORKDIR /home/jovyan/work/
 
 # Add scripts for running SIRIUS
 
-ADD https://github.com/Coayala/run_sirius/blob/main/1_automate_sirius.py ./
-ADD https://github.com/Coayala/run_sirius/blob/main/1_sirius_cli_run.sh ./
-ADD https://github.com/Coayala/run_sirius/blob/main/0_ms2_into_groups.ipynb ./
+ADD https://github.com/Coayala/run_sirius/blob/main/1_automate_sirius.py /home/jovyan/work/
+ADD https://github.com/Coayala/run_sirius/blob/main/1_sirius_cli_run.sh /home/jovyan/work/
+ADD https://github.com/Coayala/run_sirius/blob/main/0_ms2_into_groups.ipynb /home/jovyan/work/
 
 RUN sudo chmod +x 1_automate_sirius.py
 RUN sudo chmod +x 1_sirius_cli_run.sh
