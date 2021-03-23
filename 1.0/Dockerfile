@@ -3,6 +3,7 @@ FROM cyversevice/jupyterlab-scipy:latest
 # Install zip
 
 RUN sudo apt-get install -y zip
+RUN sudo apt install default-jre
 
 # Download SIRIUS
 
