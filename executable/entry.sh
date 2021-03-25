@@ -4,12 +4,12 @@ file=$1
 
 # Run separate into groups
 
-./0_ms2_into_groups.py ${file}
+python3 0_ms2_into_groups.py ${file}
 
 # Run steps for multiple groups
 
-./1_automate_python.py
+python3 1_automate_python.py
 
 # Run fix table step
 
-./2_fix_sirius_output.py
+python3 2_fix_sirius_output.py
