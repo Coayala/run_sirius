@@ -3,7 +3,7 @@ FROM cyversevice/jupyterlab-scipy:latest
 # Install zip
 
 RUN sudo apt-get install -y zip
-RUN sudo apt install default-jre
+RUN sudo apt install -y default-jre
 
 # Download SIRIUS
 
@@ -20,6 +20,6 @@ WORKDIR /home/jovyan/work/
 ADD https://github.com/Coayala/run_sirius/blob/main/interactive/1_automate_sirius.py /home/jovyan/work/1_automate_sirius.py
 ADD https://github.com/Coayala/run_sirius/blob/main/interactive/1_sirius_cli_run.sh /home/jovyan/work/1_sirius_cli_run.sh
 ADD https://github.com/Coayala/run_sirius/blob/main/interactive/0_ms2_into_groups.ipynb /home/jovyan/work/0_ms2_into_groups.ipynb
+ADD https://github.com/Coayala/run_sirius/blob/main/interactive/2_fix_sirius_output.ipynb /home/jovyan/work/2_fix_sirius_output.ipynb
 
-RUN sudo chmod +x /home/jovyan/work/1_automate_sirius.py
-RUN sudo chmod +x /home/jovyan/work/1_sirius_cli_run.sh
+RUN sudo chmod +x /home/jovyan/work/*
