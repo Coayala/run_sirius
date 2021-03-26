@@ -27,3 +27,8 @@ ADD --chown=jovyan https://raw.githubusercontent.com/Coayala/run_sirius/main/scr
 ADD --chown=jovyan https://raw.githubusercontent.com/Coayala/run_sirius/main/scripts/1_sirius_cli_run.sh /home/jovyan/work/1_sirius_cli_run.sh
 ADD --chown=jovyan https://raw.githubusercontent.com/Coayala/run_sirius/main/scripts/0_ms2_into_groups.py /home/jovyan/work/0_ms2_into_groups.py
 ADD --chown=jovyan https://raw.githubusercontent.com/Coayala/run_sirius/main/scripts/2_fix_sirius_output.py /home/jovyan/work/2_fix_sirius_output.py
+ADD --chown=jovyan https://raw.githubusercontent.com/Coayala/run_sirius/main/scripts/entry.sh /home/jovyan/work/entry.sh
+
+# Make executables
+
+RUN chmod +x /home/jovyan/work/*
